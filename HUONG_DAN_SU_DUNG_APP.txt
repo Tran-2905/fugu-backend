@@ -1,0 +1,96 @@
+# 📘 Fugu Prediction Market Documentation (Sui)
+
+## 💰 Section 1: Deposits & Onboarding
+
+**Q: How do I deposit money into my account?**
+
+**A:** Click the **"Deposit"** button in the top navigation bar. You have two options:
+
+1. 💳 **Fiat (Card):** Purchase USDC directly using a Credit or Debit card via our integrated partners, **Transak** or **Banxa**.
+2. 🔗 **Crypto (On-Chain):** Send USDC (Sui native) from your personal wallet or exchange to the unique deposit address displayed on your screen.
+
+**Q: How can I withdraw my money?**
+
+**A:**
+
+1. 👤 Go to your **Profile** page.
+2. 🔘 Click the **"Withdraw"** button.
+3. 📝 Enter the recipient wallet address (on Sui Network) and the amount you wish to withdraw.
+4. ✅ Confirm the transaction.
+
+*Note: A **0.1% service fee** is automatically deducted from your withdrawal amount.*
+
+**Q: Which blockchain networks do you support for deposits?**
+
+**A:** Currently, we exclusively support the **🌊 Sui Network**. Please ensure you are sending **Sui-native USDC**. Sending funds from other chains (like Ethereum or Solana) without bridging may result in permanent loss.
+
+*🗺️ Roadmap:* Multi-chain support (EVM chains, Aptos) is coming in late 2026.
+
+**Q: Can I deposit other tokens like SUI, ETH, or USDT?**
+
+**A:** No. The platform uses **💵 USDC** as the base currency for all markets to ensure stable payouts. If you have SUI, please swap it for USDC on a DEX (like Cetus, Bluefin, Turbos, …) before trading.
+
+## 📊 Section 2: Trading & Positions
+
+**Q: How do I buy shares using a Credit Card?**
+
+**A:** You cannot buy shares directly with a card. The process is:
+
+1. 💳 Use the "Deposit" feature to buy **USDC** via Transak/Banxa.
+2. ⏱️ Once the USDC arrives in your wallet (usually instant), go to the market page.
+3. 🎯 Select "Buy YES" or "Buy NO" using your USDC balance.
+
+**Q: What does a "YES" or "NO" share represent?**
+
+**A:**
+
+- ✅ **YES Share:** Pays out $1.00 (in USDC) if the event happens.
+- ❌ **NO Share:** Pays out $1.00 (in USDC) if the event does *not* happen.
+- 📈 The price of the share reflects the market's estimated probability (e.g., if YES costs $0.60, the market thinks there is a 60% chance of happening).
+
+**Q: Can I sell my position before the event ends?**
+
+**A:** Yes. You can sell your shares at any time before the market resolves. If your position has increased in value, you can sell early to lock in profits, or sell to cut losses if the odds turn against you.
+
+**Q: Why is the price changing?**
+
+**A:** Prices are determined automatically by our **🤖 Automated Market Maker (AMM)**. We do not use an order book. Instead, prices move based on the ratio of tokens in the liquidity pool:
+
+- 📈 If more people buy "YES", the pool automatically increases the price of "YES" and decreases the price of "NO".
+- ⚡ This ensures you always have immediate liquidity without waiting for a counterparty.
+
+## 🏆 Section 3: Resolution & Rewards
+
+**Q: How do I claim my rewards if I win?**
+
+**A:**
+
+1. 👤 Navigate to your **Profile** page.
+2. 📋 Select the **"History"** or **"Winning Markets"** tab.
+3. 🎁 Find the resolved market and click the **"Redeem"** button.
+4. 💰 Your winnings will be converted to USDC and added to your wallet balance immediately.
+
+**Q: How are markets resolved (Who decides the winner)?**
+
+**A:** We use the **🔮 Pyth Network**, a high-fidelity oracle, to determine the winner trustlessly.
+
+- 📡 The smart contract automatically reads the real-time data feed (e.g., BTC/USD price) from Pyth on-chain.
+- ⚙️ Once the market deadline is reached, Pyth pushes the final data point to the contract to verify the outcome instantly, with no human intervention.
+
+**Q: What happens if the event ends in a tie or is cancelled?**
+
+**A:** In rare cases of ambiguity or cancellation, the market may resolve to "50/50" (refunding half the value) or strictly follow the rules stated in the specific Market Description. Always read the "Rules" tab on the market page.
+
+## 🔒 Section 4: Fees & Security
+
+**Q: Are there trading fees?**
+
+**A:** Yes. A small transaction fee (0.1%) is applied to buying, selling shares and withdrawing money to support platform operations. Network gas fees (in SUI) are extremely low.
+
+**Q: Is my money safe?**
+
+**A:** Yes. We are a **🔐 non-custodial** platform.
+
+- 🚫 We do not hold your funds like a bank.
+- 💼 Your assets live in your own wallet or in the smart contract escrow.
+- 🔑 Only you have access to your private keys.
